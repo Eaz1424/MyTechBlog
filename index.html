@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Tech Blog · Articles</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-theme="light">
+    <header class="hero">
+      <div class="hero__content">
+        <h1 class="hero__title">Articles</h1>
+        <p class="hero__subtitle">
+          Deep dives into emerging tech, engineering practices, and product lessons learned along the way.
+        </p>
+      </div>
+    </header>
+
+    <nav class="filters" aria-label="Article filters">
+      <div class="filters__left">
+        <button class="filters__toggle" type="button" aria-label="Toggle filter visibility">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path
+              d="M4 6h16M6 12h12m-6 6h0"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+        <ul class="filters__tags">
+          <li><a href="#" class="tag is-active">AI &amp; ML</a></li>
+          <li><a href="#" class="tag">Cloud</a></li>
+          <li><a href="#" class="tag">DevOps</a></li>
+          <li><a href="#" class="tag">Product</a></li>
+          <li><a href="#" class="tag">Security</a></li>
+          <li><a href="#" class="tag">Culture</a></li>
+        </ul>
+      </div>
+      <div class="filters__right">
+        <button
+          class="theme-toggle"
+          type="button"
+          data-theme-toggle
+          aria-pressed="false"
+          aria-label="Toggle dark mode"
+        >
+          <span class="theme-toggle__icon" aria-hidden="true">&#9788;</span>
+          <span class="theme-toggle__label">Light</span>
+        </button>
+        <label class="filters__label" for="sort-select">Sort Collection</label>
+        <select id="sort-select" name="sort" class="filters__select">
+          <option value="recent" selected>Most Recent</option>
+          <option value="popular">Most Popular</option>
+          <option value="featured">Featured</option>
+        </select>
+        <span class="filters__chevron" aria-hidden="true">&#709;</span>
+      </div>
+    </nav>
+
+    <main class="grid" aria-label="Article list">
+      <article class="card">
+        <img
+          src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=800&q=80"
+          alt="Developer using augmented reality headset"
+          class="card__image"
+          loading="lazy"
+        />
+        <div class="card__body">
+          <div class="card__meta">
+            <span class="badge badge--ai">AI &amp; ML</span>
+            <time datetime="2025-09-18">Sep 18, 2025</time>
+          </div>
+          <h2 class="card__title">Designing Trustworthy Generative AI Assistants</h2>
+          <p class="card__excerpt">
+            Principles for building human-centered AI copilots, from evaluation frameworks to ethical guardrails that scale with your organization.
+          </p>
+          <a class="card__link" href="#">Read more</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <img
+          src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=800&q=80"
+          alt="Developer managing cloud infrastructure"
+          class="card__image"
+          loading="lazy"
+        />
+        <div class="card__body">
+          <div class="card__meta">
+            <span class="badge badge--cloud">Cloud</span>
+            <time datetime="2025-08-27">Aug 27, 2025</time>
+          </div>
+          <h2 class="card__title">Blueprint: Building a Zero-Downtime Edge Platform</h2>
+          <p class="card__excerpt">
+            Explore the architecture decisions that keep our edge network resilient, and the tools we lean on to ship global updates without a blip.
+          </p>
+          <a class="card__link" href="#">Read more</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <img
+          src="https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?auto=format&fit=crop&w=800&q=80"
+          alt="Engineer meditating beside laptop"
+          class="card__image"
+          loading="lazy"
+        />
+        <div class="card__body">
+          <div class="card__meta">
+            <span class="badge badge--culture">Culture</span>
+            <time datetime="2025-08-04">Aug 4, 2025</time>
+          </div>
+          <h2 class="card__title">Sustainable Velocity: Balancing Deep Work and Delivery</h2>
+          <p class="card__excerpt">
+            Lessons from scaling engineering teams while protecting focus time, shaping lean rituals, and keeping burnout at bay.
+          </p>
+          <a class="card__link" href="#">Read more</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <img
+          src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80"
+          alt="Laptop with code editor open"
+          class="card__image"
+          loading="lazy"
+        />
+        <div class="card__body">
+          <div class="card__meta">
+            <span class="badge badge--devops">DevOps</span>
+            <time datetime="2025-07-12">Jul 12, 2025</time>
+          </div>
+          <h2 class="card__title">Shipping Faster with Observability-Driven SRE</h2>
+          <p class="card__excerpt">
+            How we merged release engineering and SRE into a single observability-first workflow that spots incidents before customers do.
+          </p>
+          <a class="card__link" href="#">Read more</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <img
+          src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=800&q=80"
+          alt="Team collaborating on product strategy"
+          class="card__image"
+          loading="lazy"
+        />
+        <div class="card__body">
+          <div class="card__meta">
+            <span class="badge badge--product">Product</span>
+            <time datetime="2025-06-18">Jun 18, 2025</time>
+          </div>
+          <h2 class="card__title">From Idea to Impact: Shipping Experiments that Matter</h2>
+          <p class="card__excerpt">
+            A playbook for experimentation velocity, including research cadences, guardrail metrics, and narrative artifacts that align stakeholders.
+          </p>
+          <a class="card__link" href="#">Read more</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <img
+          src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?auto=format&fit=crop&w=800&q=80"
+          alt="Cybersecurity concept with lock icon"
+          class="card__image"
+          loading="lazy"
+        />
+        <div class="card__body">
+          <div class="card__meta">
+            <span class="badge badge--security">Security</span>
+            <time datetime="2025-05-02">May 2, 2025</time>
+          </div>
+          <h2 class="card__title">Scaling Secure Coding from Pull Request to Production</h2>
+          <p class="card__excerpt">
+            A layered defense strategy that embeds security ownership into every stage of the development lifecycle, complete with tooling stack.
+          </p>
+          <a class="card__link" href="#">Read more</a>
+        </div>
+      </article>
+    </main>
+
+    <section class="comments" aria-labelledby="comments-title">
+      <div class="comments__header">
+        <h2 id="comments-title">Community Discussions</h2>
+        <p>
+          Share your thoughts on the latest articles, request deep dives, or drop resources we should explore next.
+        </p>
+      </div>
+      <div id="disqus_thread"></div>
+    </section>
+
+    <footer class="about" aria-labelledby="about-title">
+      <div class="about__container">
+        <div class="about__profile">
+          <p class="about__glyph" aria-hidden="true">&lt;/&gt;</p>
+          <h2 id="about-title">About Me</h2>
+          <p>
+            I'm Eihab Aziz, a product-minded technologist building resilient systems and human-centered tools.
+            When I'm not architecting platforms, you'll find me publishing deep dives, mentoring engineers, and
+            experimenting with creative coding.
+          </p>
+        </div>
+        <div class="about__links" aria-label="Primary social links">
+          <h3>Connect</h3>
+          <ul>
+            <li><a href="https://github.com/eihabaziz" target="_blank" rel="noopener">GitHub ↗</a></li>
+            <li><a href="https://www.linkedin.com/in/eihabaziz" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+            <li><a href="https://twitter.com/eihabaziz" target="_blank" rel="noopener">X (Twitter) ↗</a></li>
+            <li><a href="mailto:eihab@mytechblog.dev">Email Me ↗</a></li>
+          </ul>
+        </div>
+        <div class="about__links" aria-label="Other destinations">
+          <h3>Elsewhere</h3>
+          <ul>
+            <li><a href="https://mytechblog.dev/projects" target="_blank" rel="noopener">Projects ↗</a></li>
+            <li><a href="https://mytechblog.dev/talks" target="_blank" rel="noopener">Talks ↗</a></li>
+            <li><a href="https://mytechblog.dev/newsletter" target="_blank" rel="noopener">Newsletter ↗</a></li>
+            <li><a href="https://mytechblog.dev/workshops" target="_blank" rel="noopener">Workshops ↗</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+    <script defer src="/.netlify/analytics.js"></script>
+    <script>
+      const disqus_config = function () {
+        this.page.url = window.location.href;
+        this.page.identifier = 'my-tech-blog-home';
+      };
+
+      (function () {
+        const d = document;
+        const s = d.createElement('script');
+        s.src = 'https://YOUR_DISQUS_SHORTNAME.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', Date.now().toString());
+        (d.head || d.body).appendChild(s);
+      })();
+    </script>
+    <noscript>
+      Please enable JavaScript to view the
+      <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a>
+    </noscript>
+  </body>
+</html>
